@@ -1,9 +1,8 @@
+/*CSS Reset*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Source+Sans+Pro&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -44,134 +43,230 @@ table {
 	border-spacing: 0;
 }
 *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
-    border: 1px solid black;
+    box-sizing:border-box; /*respect the width I've given you, if I add padding or border apply it within the width no in addition to it*/
+    padding:0;
+    margin:0;
+    max-width:100%;/*You can NEVER be bigger than your parent - this stops the horizontal scroll*/
 }
+/*General Styles*/
 html{
-    font-size: 62.5%;
+    font-size:62.5%;
 }
 body{
-    line-height: 1.5;
-    font-size: 1.8rem;
-    background-color: #FBFFFB;
-    color: #4f4f4f;
+    line-height:1.5;
+    font-size:1.8rem;
+    background-color:#FBFFFB;
+    color:#4f4f4f;
     font-family: 'Source Sans Pro', sans-serif;
-    /* THESE COLORS HAVE A CONTRAST THAT ARE EASY ON EYES */
 }
 h1, h2, h3{
     font-family: 'Oxygen', sans-serif;
-    text-align: center;
-    color: #266035;
+    text-align:center;
+    color:#266035;
 }
 h1{
-    color: #FBFFFB;
-    font-size: 5rem;
+ color:#FBFFFB;
+ font-size:5rem;
 }
 h2{
-   font-size: 3rem; 
+    font-size:3rem;
 }
 h3{
-    font-size: 2.5rem;
+    font-size:2.5rem;
 }
 a{
-    text-decoration: none;
-    color: #266035;
+    text-decoration:none;
+    color:#266035;
 }
 section{
-    padding: 4% 0;
+    padding:4% 0;
 }
-
-/* Header Section Styles */
+/*Header Section Styles*/
 nav{
-    display: flex;
+    display:flex;
     justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    background-color: #FBFFFB;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    background-color:rgba(255, 255, 255, 0.8);
 }
 .logo{
-    width: 10%;
-    display: flex;
+    width:10%;
+    display:flex;
     justify-content: center;
     align-items: center;
 }
 .logo img{
-    width: 100px;
-    height: 100px;
+    width:50%;
 }
 .links{
-    width: 50%;
-    display: flex;
+    width:50%;
+    display:flex;
     justify-content: space-evenly;
 }
-
-/* Home section styles */
+/*Home Section Styles*/
 #home{
-    height: 90vh;
-    display: flex;
+    height:90vh;
+    display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background:url(../images/header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('../images/header.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: bottom;
 }
-
-/* About Section Styles */
+/*About Section Styles*/
 #about{
-    background-image: url(../images/about-img.jpg);
-    background-size: cover;
+    background-image: url('../images/about-img.jpg');
+    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
     display:flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 80vh;
+    justify-content:flex-end;
+    align-items:center;
+    height:80vh;
 }
 #about div{
-    width: 20%;
+    width:20%;
     margin-right:10%;
 }
-div .container{
-    display: flex;
-    flex-flow: row wrap;
+/*Shop Section Styles*/
+.container{
+    display:flex;
+    flex-wrap:wrap;
 }
 .bgimg, .shopTxt{
-    width: 50%;
+    width:50%;
 }
 .shopTxt{
-    padding: 7% 0;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    padding:7% 0;
+    text-align:center;
 }
 .shopTxt div{
-    width: 60%;
+    width:60%;
 }
 .bgimg{
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+    background-position:center bottom;
 }
 .succulents{
-    background-image: url(../images/succulants.jpg);
+    background-image:url('../images/succulants.jpg');
 }
 .cacti{
-    background-image: url(../images/cacti.jpg);
+    background-image:url('../images/cacti.jpg');
 }
 .tropicals{
-    background-image: url(../images/tropicals.jpg);
+    background-image:url('../images/tropicals.jpg');
 }
 
-/* Plants Section Styles */
+/* Footer Styles */
+footer#contact{
+    background-color: #266035;
+    color: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer h2{
+    width: 100%;
+}
+footer h2, footer h3{
+    color: #FFF;
+}
+footer a{
+    color: #FFF;
+}
+.left, .right{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.right img{
+    width: 50%;
+}
+.left img{
+    width: 50%;
+}
+.copyright{
+    width: 100%;
+}
+@media(max-width: 800px){
+    #about{
+        background-position: left center;
+    }
+    #about div{
+        width: 50%;
+        margin-right: 3%;
+        margin-top: 5%;
+    }
+}
+@media(max-width:500px){
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .links{
+        width: 100%;
+    }
+    .logo{
+        width: 30%;
+    }
+    #about{
+        background-image: none;
+        background-color: #dddee0;
+        justify-content: center;
+        height: auto;
 
-
-/* .logo{
-    width: 200px;
-    height: 200px;
-} */
+    }
+    #about div{
+        margin: 0;
+        width: 90%;
+    }
+    .container{
+        justify-content: center;
+    }
+    .bgimg, .shopTxt{
+        width: 90%;
+    }
+    .bgimg{
+        height: 50vh;
+    }
+    .one{
+        order: 1;
+    }
+    .two{
+        order: 2;
+    }
+    .three{
+        order: 3;
+    }
+    .four{
+        order: 4;
+    }
+    .five{
+        order: 5;
+    }
+    .six{
+        order: 6;
+    }
+    .left, .right{
+        width: 100%;
+    }
+    footer h2{
+        order: 1;
+    }
+    .left{
+        order: 2;
+    }
+    .right{
+        order: 3;
+    }
+    .copyright{
+        order: 4;
+        text-align: center;
+    }
+}
