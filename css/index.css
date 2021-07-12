@@ -2,7 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Source+Sans+Pro&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,7 +19,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -27,9 +27,6 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
-body {
-	line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -46,23 +43,134 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-/* body{
-
-} */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    border: 1px solid black;
+}
 html{
     font-size: 62.5%;
 }
+body{
+    line-height: 1.5;
+    font-size: 1.8rem;
+    background-color: #FBFFFB;
+    color: #4f4f4f;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* THESE COLORS HAVE A CONTRAST THAT ARE EASY ON EYES */
+}
+h1, h2, h3{
+    font-family: 'Oxygen', sans-serif;
+    text-align: center;
+    color: #266035;
+}
 h1{
-    font-size: 3.2rem;
+    color: #FBFFFB;
+    font-size: 5rem;
 }
-p{
-    font-size: 1.6rem;
+h2{
+   font-size: 3rem; 
 }
-img{
+h3{
+    font-size: 2.5rem;
+}
+a{
+    text-decoration: none;
+    color: #266035;
+}
+section{
+    padding: 4% 0;
+}
+
+/* Header Section Styles */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: #FBFFFB;
+}
+.logo{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
     width: 100px;
     height: 100px;
 }
+.links{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Home section styles */
+#home{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* About Section Styles */
+#about{
+    background-image: url(../images/about-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80vh;
+}
+#about div{
+    width: 20%;
+    margin-right:10%;
+}
+div .container{
+    display: flex;
+    flex-flow: row wrap;
+}
+.bgimg, .shopTxt{
+    width: 50%;
+}
+.shopTxt{
+    padding: 7% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.shopTxt div{
+    width: 60%;
+}
+.bgimg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.succulents{
+    background-image: url(../images/succulants.jpg);
+}
+.cacti{
+    background-image: url(../images/cacti.jpg);
+}
+.tropicals{
+    background-image: url(../images/tropicals.jpg);
+}
+
+/* Plants Section Styles */
+
+
 /* .logo{
     width: 200px;
     height: 200px;
